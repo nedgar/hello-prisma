@@ -21,7 +21,7 @@ To initialize DB and run migrations:
 npm run migrate:dev
 ```
 
-To run example queries and updates and queries:
+To run example queries and updates:
 ```bash
 npm run dev
 ```
