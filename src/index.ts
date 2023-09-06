@@ -3,9 +3,36 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
-  // ... you will write your Prisma Client queries here
-  const allUsers = await prisma.user.findMany()
-  console.log(allUsers)
+  const newUser = await prisma.user.create({
+    data: {
+      name: 'Alice',
+      email: 'alice@prisma.io',
+      posts: {
+        create: { title: 'Hello World' },
+      },
+      profile: {
+        create: { bio: 'I like turtles' },
+      },
+    },
+  })
+  console.log("newUser:");
+  console.dir(newUser, { depth: null });
+
+  const allUsers = await prisma.user.findMany({
+    include: {
+      posts: true,
+      profile: true,
+    },
+  })
+  console.log("allUsers:");
+  console.dir(allUsers, { depth: null })
+
+  const post = await prisma.post.update({
+    where: { id: 1 },
+    data: { published: true },
+  })
+  console.log("post:");
+  console.dir(post, { depth: null })
 }
 
 main()

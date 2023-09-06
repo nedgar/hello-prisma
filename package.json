@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "ts-node src/index.ts",
     "migrate:dev": "prisma migrate dev",
+    "db:clean": "rm -f prisma/dev.db dev.db-log",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
