@@ -4,9 +4,10 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
+    "prisma:binaries:extract": "tar xvf prisma/binaries/4.16.2.tgz -C node_modules/prisma && tar xvf prisma/binaries/4.16.2.tgz -C node_modules/@prisma/engines",
     "dev": "ts-node src/index.ts",
     "migrate:dev": "prisma migrate dev",
-    "db:clean": "rm -f prisma/dev.db dev.db-log",
+    "db:clean": "rm -f prisma/dev.db prisma/dev.db-journal",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,5 +21,8 @@
   },
   "dependencies": {
     "@prisma/client": "4.16.2"
+  },
+  "engines": {
+    "node": "^18.12"
   }
 }

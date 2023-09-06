@@ -3,9 +3,17 @@
 The Prisma ORM example created by following: https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases-typescript-postgresql
 but using SQLite instead of PostgreSQL.
 
+This uses pre-built binaries for Prisma. It requires Node 18. 
+
 To install:
 ```bash
 npm install
+npm run prisma:binaries:extract
+```
+
+To delete any existing DB:
+```bash
+npm run db:clean
 ```
 
 To initialize DB and run migrations:
@@ -13,7 +21,7 @@ To initialize DB and run migrations:
 npm run migrate:dev
 ```
 
-To run example update and query:
+To run example queries and updates and queries:
 ```bash
 npm run dev
 ```
