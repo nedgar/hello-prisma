@@ -5,7 +5,7 @@ generator client {
   provider = "prisma-client-js"
 
   // see https://www.prisma.io/docs/concepts/components/prisma-schema/generators#binary-targets
-  binaryTargets = ["native", "windows", "darwin", "darwin-arm64", "debian-openssl-1.1.x"] // "linux-arm64-openssl-3.0.x", "linux-musl-arm64-openssl-3.0.x"
+  binaryTargets = ["native", "windows", "darwin", "darwin-arm64", "linux-musl-openssl-3.0.x"] // "debian-openssl-1.1.x", "linux-arm64-openssl-3.0.x", "linux-musl-arm64-openssl-3.0.x"
   printVersion  = true
 }
 

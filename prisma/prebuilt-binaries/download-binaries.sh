@@ -20,7 +20,9 @@ ${CURL} ${BUCKET}/darwin/libquery_engine.dylib.node.gz | gunzip > ${DEST}/libque
 ${CURL} ${BUCKET}/darwin/migration-engine.gz | gunzip > ${DEST}/migration-engine-darwin
 ${CURL} ${BUCKET}/darwin-arm64/libquery_engine.dylib.node.gz | gunzip > ${DEST}/libquery_engine-darwin-arm64.dylib.node
 ${CURL} ${BUCKET}/darwin-arm64/migration-engine.gz | gunzip > ${DEST}/migration-engine-darwin-arm64
-${CURL} ${BUCKET}/debian-openssl-1.1.x/libquery_engine.so.node.gz | gunzip > ${DEST}/libquery_engine-debian-openssl-1.1.x.so.node
-${CURL} ${BUCKET}/debian-openssl-1.1.x/migration-engine.gz | gunzip > ${DEST}/migration-engine-debian-openssl-1.1.x
+# ${CURL} ${BUCKET}/debian-openssl-1.1.x/libquery_engine.so.node.gz | gunzip > ${DEST}/libquery_engine-debian-openssl-1.1.x.so.node
+# ${CURL} ${BUCKET}/debian-openssl-1.1.x/migration-engine.gz | gunzip > ${DEST}/migration-engine-debian-openssl-1.1.x
+${CURL} ${BUCKET}/linux-musl-openssl-3.0.x/libquery_engine.so.node.gz | gunzip > ${DEST}/libquery_engine-linux-musl-openssl-3.0.x.so.node
+${CURL} ${BUCKET}/linux-musl-openssl-3.0.x/migration-engine.gz | gunzip > ${DEST}/migration-engine-linux-musl-openssl-3.0.x
 ${CURL} ${BUCKET}/windows/query_engine.dll.node.gz | gunzip > ${DEST}/query_engine-windows.dll.node
 ${CURL} ${BUCKET}/windows/migration-engine.exe.gz | gunzip > ${DEST}/migration-engine-windows.exe

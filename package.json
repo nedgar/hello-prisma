@@ -9,7 +9,7 @@
     "migrate:dev": "prisma migrate dev",
     "db:clean": "rm -f prisma/dev.db dev.db-journal",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuilt-binaries": "cd prisma/prebuilt-binaries && bash -x download-binaries.sh && tar -cavf 4.16.2.tgz ."
+    "prisma:binaries:download": "cd prisma/prebuilt-binaries && bash -x download-binaries.sh && tar -cavf 4.16.2.tgz ."
   },
   "keywords": [],
   "author": "",
